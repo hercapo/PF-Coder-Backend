@@ -1,0 +1,14 @@
+<div>
+    <h1>Your Cart:</h1>
+    {{#each products}}
+        <p>Product: {{this.product.title}}</p>
+        <p>Price: ${{this.product.price}}</p>
+        <p>Quantity: {{this.quantity}}</p>
+        <button class="deleteFromCart" data-id={{this._id}}>Delete Product from Cart</button>
+    {{/each}}
+    <br/>
+    <button class="goBack">Keep buying</button>
+    <button class="purchase">Purchase</button>
+    <button class="emptyCart">Empty your Cart</button>
+</div>
+<script src="/js/carts.js"></script>
